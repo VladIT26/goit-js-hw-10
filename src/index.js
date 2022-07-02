@@ -9,7 +9,7 @@ const searchBox = document.querySelector('#search-box');
 const countryList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 
-// let searchName;
+let searchName;
 
 
 searchBox.addEventListener('input', debounce(onInputCountry, DEBOUNCE_DELAY));
@@ -31,14 +31,6 @@ function onInputCountry() {
       }
     });
 }
-
-// removeListener();
-
-// function removeListener() {
-//     if (searchBox.value === '') {
-//         searchBox.removeEventListener('input', onInputCountry)
-//     }
-// }
 
 function createText(data) {
   if (data.length > 10) {
