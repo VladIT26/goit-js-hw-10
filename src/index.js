@@ -17,6 +17,7 @@ searchBox.addEventListener('input', debounce(onInputCountry, DEBOUNCE_DELAY));
 
 function onInputCountry() {
   searchName = searchBox.value.trim();
+  console.dir(searchName)
   fetchCountries(searchName)
     .then(data => {
       clearConteiner();
